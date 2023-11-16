@@ -1,0 +1,186 @@
+manifest:
+  remotes:
+    - name: rfpros
+      url-base: git@github.com:rfpros
+
+  defaults:
+    remote: rfpros
+    revision: main
+
+  projects:
+# Main Lyra 24 P10 project
+    - name: lyra_24_canvas_python_s10_project
+      path: lyra_24_canvas_python_s10_project
+
+# little fs
+    - name: littlefs
+      path: lyra_24_canvas_python_s10_project/modules/external/littlefs
+
+# Lyra ZCbor
+    - name: lyra_zcbor
+      path: lyra_24_canvas_python_s10_project/modules/external/lyra_zcbor
+
+# Lyra mcu manager
+    - name: lyra_mcumgr
+      path: lyra_24_canvas_python_s10_project/modules/external/lyra_mcumgr
+
+# Module independent files for Lyra 24
+    - name: lyra_24_micropython_common_board
+      path: lyra_24_canvas_python_s10_project/modules/lyra_24_micropython_common_board
+
+# Lyra 24 micropython embed files
+    - name: micropython_embed_tools
+      path: lyra_24_canvas_python_s10_project/modules/micropython_embed_tools
+
+# Lyra 24 micropython tools
+    - name: micropython_embed
+      path: lyra_24_canvas_python_s10_project/modules/micropython_embed
+
+# Hapi
+    - name: pi_hapi_ble_advertising
+      path: lyra_24_canvas_python_s10_project/modules/hapi/pi_hapi_ble_advertising
+
+    - name: pi_hapi_ble_gatt_database
+      path: lyra_24_canvas_python_s10_project/modules/hapi/pi_hapi_ble_gatt_database
+
+    - name: pi_hapi_ble_gattserver
+      path: lyra_24_canvas_python_s10_project/modules/hapi/pi_hapi_ble_gattserver
+
+    - name: pi_hapi_ble_gattclient
+      path: lyra_24_canvas_python_s10_project/modules/hapi/pi_hapi_ble_gattclient
+
+    - name: pi_hapi_ble_common
+      path: lyra_24_canvas_python_s10_project/modules/hapi/pi_hapi_ble_common
+
+    - name: pi_hapi_ble_scanner
+      path: lyra_24_canvas_python_s10_project/modules/hapi/pi_hapi_ble_scanner
+
+    - name: pi_hapi_ble_connection
+      path: lyra_24_canvas_python_s10_project/modules/hapi/pi_hapi_ble_connection
+
+    - name: pi_hapi_ble_tx_power
+      path: lyra_24_canvas_python_s10_project/modules/hapi/pi_hapi_ble_tx_power
+
+    - name: pi_hapi_common
+      path: lyra_24_canvas_python_s10_project/modules/hapi/pi_hapi_common
+
+    - name: pi_hapi_error
+      path: lyra_24_canvas_python_s10_project/modules/hapi/pi_hapi_error
+
+    - name: pi_hapi_glue
+      path: lyra_24_canvas_python_s10_project/modules/hapi/pi_hapi_glue
+
+    - name: pi_hapi_string_manipulation
+      path: lyra_24_canvas_python_s10_project/modules/hapi/pi_hapi_string_manipulation
+
+    - name: pi_hapi_sys_info
+      path: lyra_24_canvas_python_s10_project/modules/hapi/pi_hapi_sys_info
+
+    - name: pi_hapi_time
+      path: lyra_24_canvas_python_s10_project/modules/hapi/pi_hapi_time
+
+    - name: pi_hapi_gpio
+      path: lyra_24_canvas_python_s10_project/modules/hapi/pi_hapi_gpio
+
+    - name: pi_hapi_i2c
+      path: lyra_24_canvas_python_s10_project/modules/hapi/pi_hapi_i2c
+
+    - name: pi_hapi_spi
+      path: lyra_24_canvas_python_s10_project/modules/hapi/pi_hapi_spi
+
+# dapi
+    - name: pi_dapi_lyra_ble_advertising
+      path: lyra_24_canvas_python_s10_project/modules/dapi/pi_dapi_lyra_ble_advertising
+
+    - name: pi_dapi_lyra_ble_common
+      path: lyra_24_canvas_python_s10_project/modules/dapi/pi_dapi_lyra_ble_common
+
+    - name: pi_dapi_lyra_ble_connection
+      path: lyra_24_canvas_python_s10_project/modules/dapi/pi_dapi_lyra_ble_connection
+
+    - name: pi_dapi_lyra_ble_scanner
+      path: lyra_24_canvas_python_s10_project/modules/dapi/pi_dapi_lyra_ble_scanner
+
+    - name: pi_dapi_lyra_ble_gattserver
+      path: lyra_24_canvas_python_s10_project/modules/dapi/pi_dapi_lyra_ble_gattserver
+
+    - name: pi_dapi_lyra_ble_gattclient
+      path: lyra_24_canvas_python_s10_project/modules/dapi/pi_dapi_lyra_ble_gattclient
+
+    - name: pi_dapi_lyra_ble_tx_power
+      path: lyra_24_canvas_python_s10_project/modules/dapi/pi_dapi_lyra_ble_tx_power
+
+    - name: pi_dapi_lyra_common
+      path: lyra_24_canvas_python_s10_project/modules/dapi/pi_dapi_lyra_common
+
+    - name: pi_dapi_lyra_error
+      path: lyra_24_canvas_python_s10_project/modules/dapi/pi_dapi_lyra_error
+
+    - name: pi_dapi_lyra_glue
+      path: lyra_24_canvas_python_s10_project/modules/dapi/pi_dapi_lyra_glue
+
+    - name: pi_dapi_lyra_sys_info
+      path: lyra_24_canvas_python_s10_project/modules/dapi/pi_dapi_lyra_sys_info
+
+    - name: pi_dapi_lyra_time
+      path: lyra_24_canvas_python_s10_project/modules/dapi/pi_dapi_lyra_time
+
+    - name: pi_dapi_gpio
+      path: lyra_24_canvas_python_s10_project/modules/dapi/pi_dapi_gpio
+
+    - name: pi_dapi_lyra_i2c
+      path: lyra_24_canvas_python_s10_project/modules/dapi/pi_dapi_lyra_i2c
+
+    - name: pi_dapi_lyra_spi
+      path: lyra_24_canvas_python_s10_project/modules/dapi/pi_dapi_lyra_spi
+
+# micropython Language interface
+    - name: li_mp_ble_advertiser
+      path: lyra_24_canvas_python_s10_project/modules/limp/li_mp_ble_advertiser
+
+    - name: li_mp_ble_common
+      path: lyra_24_canvas_python_s10_project/modules/limp/li_mp_ble_common
+
+    - name: li_mp_ble_connection
+      path: lyra_24_canvas_python_s10_project/modules/limp/li_mp_ble_connection
+
+    - name: li_mp_ble_scanner
+      path: lyra_24_canvas_python_s10_project/modules/limp/li_mp_ble_scanner
+
+    - name: li_mp_ble_gattserver
+      path: lyra_24_canvas_python_s10_project/modules/limp/li_mp_ble_gattserver
+
+    - name: li_mp_ble_gattclient
+      path: lyra_24_canvas_python_s10_project/modules/limp/li_mp_ble_gattclient
+
+    - name: li_mp_ble_tx_power
+      path: lyra_24_canvas_python_s10_project/modules/limp/li_mp_ble_tx_power
+
+    - name: li_mp_timer
+      path: lyra_24_canvas_python_s10_project/modules/limp/li_mp_timer
+
+    - name: li_mp_machine_i2c
+      path: lyra_24_canvas_python_s10_project/modules/limp/li_mp_machine_i2c
+
+    - name: li_mp_machine_pin
+      path: lyra_24_canvas_python_s10_project/modules/limp/li_mp_machine_pin
+
+    - name: li_mp_machine_spi
+      path: lyra_24_canvas_python_s10_project/modules/limp/li_mp_machine_spi
+
+    - name: li_mp_zcbor
+      path: lyra_24_canvas_python_s10_project/modules/limp/li_mp_zcbor
+
+  self:
+    path: west_manifest
+
+jenkins:
+  version_prefix: 0.0.0
+  part_number: 999-00224
+  part_number_uart_dfu: 999-00225
+  part_number_ota_dfu: 999-00226
+  project: lyra_24
+  application: canvas_python
+  module: s
+  power: 10
+  sdk: 4.3.1
