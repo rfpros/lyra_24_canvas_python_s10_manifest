@@ -28,13 +28,14 @@ manifest:
     - name: lyra_24_micropython_common_board
       path: lyra_24_canvas_python_s10_project/modules/lyra_24_micropython_common_board
 
-# Lyra 24 micropython embed files
+# Lyra 24 micropython tools
     - name: micropython_embed_tools
       path: lyra_24_canvas_python_s10_project/modules/micropython_embed_tools
 
-# Lyra 24 micropython tools
+# Lyra 24 micropython embed files
     - name: micropython_embed
       path: lyra_24_canvas_python_s10_project/modules/micropython_embed
+      revision: lyra_24
 
 # Hapi
     - name: pi_hapi_ble_advertising
