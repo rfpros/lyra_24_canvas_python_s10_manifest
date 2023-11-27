@@ -134,7 +134,7 @@ pipeline {
                     env.SIMPLICITY_STUDIO_BUILD_CFG = "${env.PROJECT_DIR}_release"
 
                     // Where to put build files
-                    env.SIMPLICITY_STUDIO_CI_WORKSPACE = "${env.WORKSPACE}\\workspace_${application}_${module}${power}"
+                    env.SIMPLICITY_STUDIO_CI_WORKSPACE = "${env.WORKSPACE}\\ws"
                 }
             }
         }
@@ -155,17 +155,6 @@ pipeline {
             }
         }
 
-        stage('Build Pre Compile') {
-            steps {
-                // Freeze the manifest and save it as an artifact so we can see exactly what software was used to make the build
-                bat """call $WORKSPACE\\.venv\\Scripts\\activate.bat
-                       PUSHD .
-                       cd ${env.SIMPLICITY_STUDIO_PROJECT}
-                       call build_pre_compile.bat
-                       POPD
-                    """
-            }
-        }
         stage('Build Configuration') {
             steps {
                 script {
@@ -288,6 +277,16 @@ pipeline {
         // No longer multiple builds so no paralell or encomapsing stage / stages
         stage('Build') {
             steps{
+
+                // Pre compile must be run on the original directory so the generated files are copied and included in the
+                // build
+                bat """
+                PUSHD .
+                cd ${env.SIMPLICITY_STUDIO_PROJECT}
+                CALL modules\\lyra_24_micropython_common_board\\jenkins_pre_compile.bat
+                POPD
+                """
+
                 // Run build
                 bat """mkdir "${env.SIMPLICITY_STUDIO_CI_WORKSPACE}" """
                 bat """${env.SIMPLICITY_STUDIO_SCRIPT_UTIL} -data ${env.SIMPLICITY_STUDIO_CI_WORKSPACE} ${env.SIMPLICITY_STUDIO_SCRIPT} ${env.SIMPLICITY_STUDIO_PROJECT} --AutoEnable --buildConfig "${env.SIMPLICITY_STUDIO_BUILD_CFG}" """
