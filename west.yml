@@ -89,6 +89,9 @@ manifest:
     - name: pi_hapi_spi
       path: lyra_24_canvas_python_s10_project/modules/hapi/pi_hapi_spi
 
+    - name: pi_hapi_uart
+      path: lyra_24_canvas_python_s10_project/modules/hapi/pi_hapi_uart
+
 # dapi
     - name: pi_dapi_lyra_ble_advertising
       path: lyra_24_canvas_python_s10_project/modules/dapi/pi_dapi_lyra_ble_advertising
@@ -135,6 +138,9 @@ manifest:
     - name: pi_dapi_lyra_spi
       path: lyra_24_canvas_python_s10_project/modules/dapi/pi_dapi_lyra_spi
 
+    - name: pi_dapi_lyra_uart
+      path: lyra_24_canvas_python_s10_project/modules/dapi/pi_dapi_lyra_uart
+
 # micropython Language interface
     - name: li_mp_ble_advertiser
       path: lyra_24_canvas_python_s10_project/modules/limp/li_mp_ble_advertiser
@@ -168,6 +174,9 @@ manifest:
 
     - name: li_mp_machine_spi
       path: lyra_24_canvas_python_s10_project/modules/limp/li_mp_machine_spi
+
+    - name: li_mp_machine_uart
+      path: lyra_24_canvas_python_s10_project/modules/limp/li_mp_machine_uart
 
     - name: li_mp_zcbor
       path: lyra_24_canvas_python_s10_project/modules/limp/li_mp_zcbor
